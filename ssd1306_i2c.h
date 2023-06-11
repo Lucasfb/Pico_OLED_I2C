@@ -81,6 +81,7 @@ void calc_render_area_buflen(struct render_area *area);
     void SSD1306_scroll(bool on);
     void render(uint8_t *buf, struct render_area *area) ;
     // I had to remove the static from the two functions below for them to be accessible to the main function
+    // TODO: Change the functions' names so that the name can be reused without a static keyword
     void SetPixel(uint8_t *buf, int x,int y, bool on);
     void DrawLine(uint8_t *buf, int x0, int y0, int x1, int y1, bool on);
     int GetFontIndex(uint8_t ch);
