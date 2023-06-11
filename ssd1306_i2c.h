@@ -74,20 +74,20 @@ struct render_area {
 void calc_render_area_buflen(struct render_area *area);
 
 #ifdef i2c_default
-void SSD1306_send_cmd(uint8_t cmd);
-void SSD1306_send_cmd_list(uint8_t *buf, int num);
-void SSD1306_send_buf(uint8_t buf[], int buflen);
-void SSD1306_init();
-void SSD1306_scroll(bool on);
-void render(uint8_t *buf, struct render_area *area) ;
-// I had to remove the static from the two functions below for them to be accessible to the main function
-void SetPixel(uint8_t *buf, int x,int y, bool on);
-void DrawLine(uint8_t *buf, int x0, int y0, int x1, int y1, bool on);
-int GetFontIndex(uint8_t ch);
-uint8_t reverse(uint8_t b);
-void FillReversedCache();
-void WriteChar(uint8_t *buf, int16_t x, int16_t y, uint8_t ch);
-void WriteString(uint8_t *buf, int16_t x, int16_t y, char *str);
+    void SSD1306_send_cmd(uint8_t cmd);
+    void SSD1306_send_cmd_list(uint8_t *buf, int num);
+    void SSD1306_send_buf(uint8_t buf[], int buflen);
+    void SSD1306_init();
+    void SSD1306_scroll(bool on);
+    void render(uint8_t *buf, struct render_area *area) ;
+    // I had to remove the static from the two functions below for them to be accessible to the main function
+    void SetPixel(uint8_t *buf, int x,int y, bool on);
+    void DrawLine(uint8_t *buf, int x0, int y0, int x1, int y1, bool on);
+    int GetFontIndex(uint8_t ch);
+    uint8_t reverse(uint8_t b);
+    void FillReversedCache();
+    void WriteChar(uint8_t *buf, int16_t x, int16_t y, uint8_t ch);
+    void WriteString(uint8_t *buf, int16_t x, int16_t y, char *str);
 #endif
 
 #endif
